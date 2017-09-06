@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="News">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:title="Lukla news"
+                    android:id="@+id/lukla_ns"
+                    android:icon="@drawable/news"
+                    />
+                <item
+                    android:visible="false"
+                    android:title="Recent news"
+                    android:id="@+id/news"/>
+            <item
+                    android:title="General news"
+                    android:id="@+id/news1"
+                    android:visible="false"
+                />
+            <item
+                android:id="@+id/news3"
+                android:title="World news"
+                android:visible="false"
+                />
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="Features">
+        <menu>
+            <item
+                android:id="@+id/settingCheck"
+                android:icon="@drawable/ic_build_black_24dp"
+                android:title="App Setting"
+                />
+
+            <item android:icon="@drawable/ic_call_end_black_24dp"
+                android:title="Contact Us"
+                android:id="@+id/contact_us"
+                />
+            <item
+                android:id="@+id/about_uss"
+                android:icon="@drawable/ic_font_download_black_24dp"
+                android:title="About"
+
+                />
+
+        </menu>
+    </item>
+    <item android:title="Communication">
+        <menu>
+            <item android:title="Share"
+                android:icon="@drawable/ic_send_black_24dp"
+                android:id="@+id/item_share" />
+        </menu>
+    </item>
+    <item android:title="Find Us">
+        <menu>
+            <item android:title="Location"
+                android:icon="@drawable/location"
+                android:id="@+id/item_location"/>
+            <item android:title="Facebook"
+                android:icon="@drawable/ic_facebook"
+                android:id="@+id/item_facebook"/>
+           <!-- <item android:title="Twitter"
+                android:icon="@drawable/ic_twitter"
+                android:id="@+id/item_twitter"/>-->
+        </menu>
+    </item>
+</menu>

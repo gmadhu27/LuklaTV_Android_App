@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="#666666"
+    android:fitsSystemWindows="true"
+    tools:context="smadhu.example.com.luklatv.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:title="hello"
+            android:src="@drawable/finall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#666666"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:weightSum="1">
+           <!-- <ImageView
+                android:src="@drawable/luk"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                />-->
+        </android.support.v7.widget.Toolbar>
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/swip"
+            android:layout_height="250dp">
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+            android:id="@+id/youtube"
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="274dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ScrollView
+        android:layout_below="@+id/youtube"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/frameLayout"
+                >
+                <android.support.v7.widget.CardView
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+                    <RelativeLayout
+                        android:layout_margin="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="Lukla's Videos"
+                            android:textColor="#663ecc"
+                            android:textSize="15sp"
+                            android:id="@+id/myText"/>
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/myText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/recy1">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/frameLayout"
+                android:id="@+id/frameLayout3">
+                <android.support.v7.widget.CardView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+                    <RelativeLayout
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:text="Live TV"
+                            android:textColor="#663ecc"
+                            android:textSize="18sp"
+                            android:id="@+id/myTextt"/>
+                        <LinearLayout
+                            android:weightSum="3"
+                            android:id="@+id/live_Tv1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/kantipur_tv"
+                            android:src="@drawable/kan" />
+                        <ImageView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/abc_tv"
+                            android:src="@drawable/abc" />
+                        <ImageView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/image_tv"
+                            android:src="@drawable/image1" />
+                        </LinearLayout>
+                       </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+           <!-- <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:id="@+id/frameLayout4"
+                android:layout_below="@+id/frameLayout3">
+                <android.support.v7.widget.CardView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+                    <RelativeLayout
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:weightSum="3"
+                            android:id="@+id/live_Tv12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/kantipur_tv1"
+                                android:src="@drawable/kan" />
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/abc_tv1"
+                                android:src="@drawable/abc" />
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/image_tv1"
+                                android:src="@drawable/image1" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/frameLayout2"
+                android:layout_below="@+id/frameLayout3">
+                <android.support.v7.widget.CardView
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+                    <RelativeLayout
+                        android:layout_margin="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="News"
+                            android:textSize="15sp"
+                            android:textColor="#663ecc"
+                            android:id="@+id/myText2"/>
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:id="@+id/luklaIm"
+                            android:src="@drawable/finall"
+                            android:layout_below="@+id/myText2"/>
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+    </LinearLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:paddingBottom="10dp"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/menu" />
+</android.support.v4.widget.DrawerLayout>
